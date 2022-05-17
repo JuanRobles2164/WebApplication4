@@ -9,10 +9,10 @@ namespace WebApplication4.Models
         public string Estado { get; set; } = "ACTIVA";
 
         public int EstudianteId { get; set; }
-        public Estudiante estudiante { get; set; }
+        public Estudiante Estudiante { get; set; }
 
         public int AspiranteId { get; set; }
-        public Aspirante aspirante { get; set; }
+        public Aspirante Aspirante { get; set; }
 
         public ReservaCupo create_instance(ReservaCupo e)
         {

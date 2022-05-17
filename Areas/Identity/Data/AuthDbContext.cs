@@ -16,7 +16,13 @@ namespace WebApplication4.Data
             : base(options)
         {
         }
-        public DbSet<Aspirante> aspirantes;
+        public DbSet<Aspirante> aspirantes { get; set; }
+        public DbSet<Curso> cursos { get; set; }
+        public DbSet<Estudiante> estudiantes { get; set; }
+        public DbSet<Grado> grados { get; set; }
+        public DbSet<Matricula> matriculas { get; set; }
+        public DbSet<ReservaCupo> reservaCupos { get; set; }
+        public DbSet<Sede> sedes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

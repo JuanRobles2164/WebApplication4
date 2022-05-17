@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using WebApplication4.Data;
 
 namespace WebApplication4
 {
@@ -24,6 +26,9 @@ namespace WebApplication4
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            var connection = @"Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;";
+            services.AddDbContext<AuthDbContext>(options => options.UseSqlServer(connection));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
